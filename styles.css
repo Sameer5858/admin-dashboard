@@ -3,13 +3,20 @@
 body {
   min-height: 100vh;
   display: grid;
-  grid-template: 1fr 5fr /1fr 4fr;
+  grid-template: 1fr 4fr /1fr 4fr;
   font-family: "Roboto", sans-serif;
 }
+/* header styles */
 header {
-  background: #000;
-  grid-column: 2;
+  background: white;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: repeat(auto-fill, 1fr);
 }
+header :nth-child(n + 6) {
+  grid-row-start: 2;
+}
+
 /* sidebar styles */
 nav {
   background: #10a1e4e1;
