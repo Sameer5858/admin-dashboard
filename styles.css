@@ -11,10 +11,89 @@ header {
   background: white;
   display: grid;
   grid-template-rows: 1fr 2fr;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: 7fr 1fr 1fr 1fr;
 }
-header :nth-child(n + 6) {
+header :nth-child(n + 5) {
   grid-row-start: 2;
+}
+button {
+  border: none;
+  background: white;
+}
+
+input.searchbar {
+  border: none;
+  background: rgb(82, 82, 82, 0.1);
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 20px;
+  height: 28px;
+  flex-grow: 1;
+  justify-self: start;
+  align-self: center;
+}
+div.search {
+  grid-area: 1/1/2/2;
+  grid-auto-flow: column;
+  align-self: center;
+  padding-left: 20px;
+  gap: 5px;
+  display: flex;
+  flex-grow: 1;
+}
+button.search {
+  justify-self: end;
+}
+.bell {
+  justify-self: end;
+}
+.profile {
+  justify-self: center;
+}
+.user-name {
+  display: flex;
+  justify-self: start;
+  align-self: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.greeting {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: start;
+  align-self: center;
+  gap: 10px;
+  padding: 20px;
+}
+.greeting .text {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+.greeting .text:first-line {
+  font-size: 14px;
+}
+button.new,
+button.upload,
+button.share {
+  background: #15acf1;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  align-self: center;
+}
+button.new {
+  justify-self: end;
+}
+button.upload {
+  justify-self: center;
+}
+button.share {
+  justify-self: start;
 }
 
 /* sidebar styles */
@@ -51,7 +130,35 @@ ul > li {
   justify-content: start;
   align-items: center;
 }
-
+/* main styles */
 main {
-  background: blue;
+  background-color: rgba(102, 102, 154, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.project {
+  background-color: blue;
+  grid-area: 1/1/3/3;
+}
+.announcement {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+}
+article {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.announcement > article > div:first-line {
+  font-weight: bold;
+  font-size: 18px;
+}
+.trending {
+  background-color: peachpuff;
+  grid-area: 2/3;
 }
