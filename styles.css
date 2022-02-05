@@ -1,9 +1,9 @@
 @import url(node_modules/normalize.css/normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  min-height: 100vh;
+  max-height: 100vh;
   display: grid;
-  grid-template: 1fr 4fr /1fr 4fr;
+  grid-template: 1fr 6fr /1fr 3fr;
   font-family: "Roboto", sans-serif;
 }
 /* header styles */
@@ -104,7 +104,7 @@ nav {
   font-weight: bold;
 }
 .sidebar {
-  font-size: 24px;
+  font-size: 36px;
   padding-left: 20px;
   padding-top: 20px;
 }
@@ -113,6 +113,7 @@ nav {
   grid-auto-flow: column;
   place-items: center;
   place-content: start;
+
   gap: 10px;
   padding-left: 5px;
 }
@@ -132,16 +133,41 @@ ul > li {
 }
 /* main styles */
 main {
-  background-color: rgba(102, 102, 154, 0.1);
+  background-color: #efeff5;
   display: grid;
   grid-template-columns: 1fr 1fr 0.8fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+  padding: 40px 25px;
 }
-.project {
-  background-color: blue;
+/* project styles */
+.project-container {
   grid-area: 1/1/3/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
 }
+.project-container article {
+  flex: 1;
+  background-color: #efeff5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: 20px;
+}
+.project-container .project {
+  padding: 20px;
+  background: white;
+  border-left: 10px solid orange;
+  border-radius: 10px;
+}
+.project-container .head {
+  padding-left: 20px;
+}
+
+/* announcement styles */
 .announcement {
   grid-column: 3;
   display: flex;
@@ -153,12 +179,37 @@ article {
   border-radius: 10px;
   flex-grow: 1;
 }
-
+.head {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.announcement > article > div {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+}
 .announcement > article > div:first-line {
   font-weight: bold;
   font-size: 18px;
 }
+
 .trending {
-  background-color: peachpuff;
   grid-area: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+.trending article {
+  display: flex;
+  flex-direction: column;
+}
+.trending article > div {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  line-height: 25px;
+  gap: 20px;
+  font-size: 18px;
+  padding-bottom: 20px;
+  flex: 1;
 }
