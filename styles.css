@@ -3,7 +3,7 @@
 body {
   max-height: 100vh;
   display: grid;
-  grid-template: 1fr 6fr /1fr 3fr;
+  grid-template: 1fr 6fr /1fr 4fr;
   font-family: "Roboto", sans-serif;
 }
 /* header styles */
@@ -162,9 +162,21 @@ main {
   background: white;
   border-left: 10px solid orange;
   border-radius: 10px;
+  display: grid;
 }
 .project-container .head {
   padding-left: 20px;
+}
+.project > div:last-of-type {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: end;
+  gap: 10px;
+}
+.project > div:first-line {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
 }
 
 /* announcement styles */
