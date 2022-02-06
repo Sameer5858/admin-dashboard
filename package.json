@@ -1,4 +1,21 @@
 {
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sameer5858/admin-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sameer5858/admin-dashboard/issues"
+  },
+  "homepage": "https://github.com/Sameer5858/admin-dashboard#readme",
   "dependencies": {
     "normalize.css": "^8.0.1"
   }
